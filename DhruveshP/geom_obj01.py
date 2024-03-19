@@ -4,6 +4,7 @@ import os
 import time
 
 def create_polyline_feature_class(input_file, output_shp):
+    input_file = "E:\acgis\gis4207_prog\Data"
     arcpy.env.overwriteOutput = True
 
     arcpy.management.CreateFeatureclass(os.path.dirname(output_shp), os.path.basename(output_shp), "POLYLINE", spatial_reference=arcpy.SpatialReference(4326))
